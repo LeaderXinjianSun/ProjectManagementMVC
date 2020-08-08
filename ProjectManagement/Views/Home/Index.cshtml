@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Project>
+@{
+
+    ViewBag.Title = "项目列表页面";
+
+
+}
+<div class="table-responsive-sm">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th scope="col">项目ID</th>
+                <th scope="col">项目名称</th>
+                <th scope="col">数量</th>
+                <th scope="col">设计人员</th>
+                <th scope="col">电控人员</th>
+                <th scope="col">软件人员</th>
+                <th scope="col">组装人员</th>
+                <th scope="col">设计人员积分</th>
+                <th scope="col">电控人员积分</th>
+                <th scope="col">软件人员积分</th>
+                <th scope="col">组装人员积分</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var project in Model)
+            {
+            <tr>
+                <td scope="row">@project.ID</td>
+                <td>@project.Name</td>
+                <td>@project.Count</td>
+                <td>@project.Designer</td>
+                <td>@project.Engineer</td>
+                <td>@project.Programmer</td>
+                <td>@project.Assembler</td>
+                <td>@project.DesignerScore</td>
+                <td>@project.EngineerScore</td>
+                <td>@project.ProgrammerScore</td>
+                <td>@project.AssemblerScore</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
