@@ -13,7 +13,8 @@ namespace ProjectManagement.Models
             modelBuilder.Entity<Project>().HasData(
                 new Project
                 {
-                    ID = "SZ-20191228-01",
+                    Id = 1,
+                    ProjectID = "SZ-20191228-01",
                     Name = "收放板共用机（LDR-D5X-SF)   VPP D53_撕膜电测",
                     Count = 24,
                     Designer = "范杰",
@@ -27,7 +28,8 @@ namespace ProjectManagement.Models
                 },
                 new Project
                 {
-                    ID = "LDR-SJ-0220",
+                    Id = 2,
+                    ProjectID = "LDR-SJ-0220",
                     Name = "X1023自动上下料机",
                     Count = 13,
                     Designer = "范杰",

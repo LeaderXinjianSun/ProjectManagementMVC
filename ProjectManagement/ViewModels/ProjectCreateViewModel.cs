@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjectManagement.Models
+namespace ProjectManagement.ViewModels
 {
-    public class Project
+    public class ProjectCreateViewModel
     {
-        public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "请输入名字")]
         [Display(Name = "项目编号")]
         public string ProjectID { get; set; }
         [Display(Name = "项目名称")]

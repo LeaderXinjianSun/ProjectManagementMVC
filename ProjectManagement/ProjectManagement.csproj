@@ -5,6 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200807141520_InitialCreate.cs" />
+    <Compile Remove="Migrations\20200807141520_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20200808030523_AlterStudentsSeedData.cs" />
+    <Compile Remove="Migrations\20200808030523_AlterStudentsSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20200808064530_AlterStudentsSeedData1.cs" />
+    <Compile Remove="Migrations\20200808064530_AlterStudentsSeedData1.Designer.cs" />
+    <Compile Remove="Migrations\20200808065230_AlterProjectTable.cs" />
+    <Compile Remove="Migrations\20200808065230_AlterProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20200808070022_AlterProjectTable.cs" />
+    <Compile Remove="Migrations\20200808070022_AlterProjectTable.Designer.cs" />
+    <Compile Remove="Migrations\20200809120555_changetable.cs" />
+    <Compile Remove="Migrations\20200809120555_changetable.Designer.cs" />
+    <Compile Remove="Migrations\20200809120807_changetable.cs" />
+    <Compile Remove="Migrations\20200809120807_changetable.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

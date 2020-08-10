@@ -9,8 +9,8 @@ using ProjectManagement.Models;
 namespace ProjectManagement.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200808030523_AlterStudentsSeedData")]
-    partial class AlterStudentsSeedData
+    [Migration("20200809121501_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,8 +22,10 @@ namespace ProjectManagement.Migrations
 
             modelBuilder.Entity("ProjectManagement.Models.Project", b =>
                 {
-                    b.Property<string>("ID")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Assembler")
                         .HasColumnType("nvarchar(max)");
@@ -55,14 +57,18 @@ namespace ProjectManagement.Migrations
                     b.Property<double>("ProgrammerScore")
                         .HasColumnType("float");
 
-                    b.HasKey("ID");
+                    b.Property<string>("ProjectID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Projects");
 
                     b.HasData(
                         new
                         {
-                            ID = "SZ-20191228-01",
+                            Id = 1,
                             Assembler = "邱伟",
                             AssemblerScore = 10.0,
                             Count = 24,
@@ -72,11 +78,12 @@ namespace ProjectManagement.Migrations
                             EngineerScore = 10.0,
                             Name = "收放板共用机（LDR-D5X-SF)   VPP D53_撕膜电测",
                             Programmer = "孙鑫建",
-                            ProgrammerScore = 10.0
+                            ProgrammerScore = 10.0,
+                            ProjectID = "SZ-20191228-01"
                         },
                         new
                         {
-                            ID = "LDR-SJ-0220",
+                            Id = 2,
                             Assembler = "李晓锁",
                             AssemblerScore = 10.0,
                             Count = 13,
@@ -86,7 +93,8 @@ namespace ProjectManagement.Migrations
                             EngineerScore = 10.0,
                             Name = "X1023自动上下料机",
                             Programmer = "孙鑫建",
-                            ProgrammerScore = 10.0
+                            ProgrammerScore = 10.0,
+                            ProjectID = "LDR-SJ-0220"
                         });
                 });
 #pragma warning restore 612, 618
